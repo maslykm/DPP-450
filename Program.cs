@@ -24,9 +24,6 @@ namespace ConsoleApp
         {
             byte[] initSequence = { 0x1B, 0x40 };
             port.Write(initSequence, 0, initSequence.Length);
-
-            byte[] resetLineFeed = { 0x1B, 0x33, 0x00 };
-            port.Write(resetLineFeed, 0, resetLineFeed.Length);
         }
 
         private static void ResetLineFeed(SerialPort port)
